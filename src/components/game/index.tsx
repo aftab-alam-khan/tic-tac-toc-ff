@@ -69,8 +69,6 @@ const O = styled.span`
   }
 `;
 
-const StartGame = styled.button``;
-
 export type IPlayMatrix = Array<Array<string | null>>;
 export interface IStartGame {
     start: boolean,
@@ -86,7 +84,6 @@ export function Game() {
     ]);
 
     const {
-        isInRoom,
         playerSymbol,
         setPlayerSymbol,
         isPlayerTurn,
@@ -206,11 +203,11 @@ export function Game() {
         handleGameUpdate();
         handleGameStart();
         handleGameWin();
-    }, []);
+    });
 
     return <GameContainer>
         {!isGameStarted && <h2>Waiting for Other Player to Join to Start the Game!</h2>}
-        {!isGameStarted || !isPlayerTurn && <PlayStopper />}
+        {(!isGameStarted || !isPlayerTurn) && <PlayStopper />}
         {matrix.map((row, rowIdx) => {
             return <RowContainer key={rowIdx}>
                 {row.map((column, columnIdx) => (

@@ -37,11 +37,10 @@ function App() {
   const [isGameStarted, setGameStarted] = useState(false);
 
   const connectSocket = async () => {
-    const socket = await socketService.connect('http://localhost:9000').catch((err) => {
+    await socketService.connect('https://tic-tac-toe-bac.herokuapp.com').catch((err) => {
       console.log('Error: ', err);
       
     })
-    console.log(' const socket', socket);
     
   }
 
