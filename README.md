@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+the app is live now click here start the game [https://main--gleeful-cucurucho-b7327a.netlify.app/](https://main--gleeful-cucurucho-b7327a.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
